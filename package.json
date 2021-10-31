@@ -1,0 +1,19 @@
+{
+  "name": "major-project-backend",
+  "version": "1.0.0",
+  "description": "Backend side for urban blue",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkroX/Major-Project-Backend.git"
+  },
+  "author": "Shashank",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SkroX/Major-Project-Backend/issues"
+  },
+  "homepage": "https://github.com/SkroX/Major-Project-Backend#readme"
+}
