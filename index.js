@@ -1,8 +1,19 @@
 const express = require("express");
+const cookieParser = require("cookie-parser");
+const cors = require('cors');
+
+const serviceAccount = require("./config/fbServiceAccountKey.json");
+
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: "https://fbauthdemo-2a451.firebaseio.com"
+});
 
 const app = express();
 
 //Body Parsing
+app.use(cors());
+app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -12,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 //routes
-require('./routes/auth.routes')(app);
+// require('./routes/auth.routes')(app);
 
 //Set port and serve app: Backend Server
 const PORT = process.env.PORT || 5000;
